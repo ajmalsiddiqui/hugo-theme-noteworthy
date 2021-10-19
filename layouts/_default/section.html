@@ -3,7 +3,7 @@
     {{ .Title }}
   </h1>
   <div>
-      {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ $pages := where site.RegularPages "Type" "in" .Type }}
       {{ range ($pages.GroupByDate "2006") }}
           <h3>{{ .Key }}</h3> <!-- Display the year -->
 
