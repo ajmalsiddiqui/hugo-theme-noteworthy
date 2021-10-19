@@ -195,9 +195,11 @@ mark {
 }
 
 blockquote {
-    border-left: 4px solid $gray-lightest;
-    padding-left: 1.3em;
-    margin-left: 0em;
+    border-left: 8px solid $gray-lightest;
+    background-color: #f2f2f2;
+    padding: 1.5em;
+    padding-left: 1.8em;
+    margin-left: 12px;
     margin-top: 0em;
 
     p {
