@@ -1,11 +1,8 @@
 {{ define "main" }}
-<!-- This page is the same as the Archives page -->
-<!-- All of the site's posts grouped by year -->
   <h1>
-    Archives
+    {{ .Title }}
   </h1>
   <div>
-     <!-- Group all the post pages from the same year -->
       {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
       {{ range ($pages.GroupByDate "2006") }}
           <h3>{{ .Key }}</h3> <!-- Display the year -->
