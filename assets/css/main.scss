@@ -436,7 +436,7 @@ a.footnote-ref {
 }
 
 .archives-list-item-date {
-    width: 60px;
+    min-width: 60px;
     margin-right: 0.25em;
     color: $gray-light;
 }
