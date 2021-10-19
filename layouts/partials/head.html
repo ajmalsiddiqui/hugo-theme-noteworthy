@@ -5,6 +5,10 @@
     <meta name="format-detection" content="telephone=no"/>
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    <!-- Google recommends adding a canonical link to self for SEO -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
