@@ -6,6 +6,16 @@
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
+    {{ if .IsPage }}
+    <!-- Page Author & Description -->
+    <meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
+    <meta name="description" content="{{ .Summary | plainify }}" />
+    {{ else }}
+    <!-- Site Author & Description -->
+    <meta name="author" content="{{ .Site.Params.author }}" />
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    {{ end }}
+
     <!-- Google recommends adding a canonical link to self for SEO -->
     <link rel="canonical" href="{{ .Permalink }}" />
 
