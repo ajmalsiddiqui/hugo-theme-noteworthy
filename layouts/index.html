@@ -10,7 +10,7 @@
         {{ range (.Paginate $pages).Pages }}
         <article>
             <h2>
-                <a href="{{ .Permalink }}">
+                <a href="{{ .RelPermalink }}">
                     {{ .Title }}
                 </a>
             </h2>
